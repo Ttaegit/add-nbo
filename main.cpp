@@ -7,10 +7,6 @@
 
 int main(int argc, char *argv[]) {
 
-    if (argc != 3) {
-		return 0;
-	}
-	
     uint32_t file1, file2;
     	FILE *file = fopen(argv[1], "r");
     	fread(&file1, sizeof(uint32_t), 1, file); //fread 파일안의 문자열 읽기, & 구조체 변수, sizeof 괄호안 구조체 크기 입력
