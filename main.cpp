@@ -16,8 +16,8 @@ int main(int argc, char *argv[]) {
     	fread(&file2, sizeof(uint32_t), 1, file);
     	fclose(file);
     
-    	file1 = htonl(file1); //host to network
-    	file2 = htonl(file2);
+    	file1 = ntohl(file1); 
+    	file2 = ntohl(file2);
 
     	printf ("%d(0x%x) + %d(0x%x) = %d(0x%x)\n", file1, file1, file2, file2, file1 + file2, file1 + file2);
 } //%d 10진수 정수 출력, %x int 값을 부호없는 16진수로 출력 
